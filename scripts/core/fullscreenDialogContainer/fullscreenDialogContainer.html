@@ -1,0 +1,11 @@
+﻿<div class="fullscreen-dialog-container" ng-repeat="item in fullscreenDialogs">
+    <view-container content="{{item.content}}" parameters="item.parameters" data="item.data" close-dialog="closeFullscreenDialog(result)"></view-container>
+</div>
+<style>
+    .fullscreen-dialog-container {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+</style>

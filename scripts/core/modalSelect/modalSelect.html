@@ -1,0 +1,43 @@
+﻿<form class="fullscreen-container message-box-container mobile-container">
+    <div class="fullscreen-modal-heading">
+        {{$ctrl.parameters.label}}
+        <svg-button class="modal-back-button responsive-svg-button" xlinkhref="./icons/arrow-left.svg#icon" view-box="0 0 1024 1024" ng-click="$ctrl.backClick()"></svg-button>
+    </div>
+    <app-logo></app-logo>
+    <div class="fullscreen-modal-dialog-spacer"></div>
+
+    <div class="mobile-list-item" ng-repeat="item in $ctrl.options" ng-click="$ctrl.selectItem(item)">
+        <div class="mobile-list-heading" style="padding-left: 10px">{{item.Value}}</div>
+        <div class="mobile-list-arrow  top-50" ng-if="$ctrl.parameters.allowMultiple==false">
+            <svg-button view-box="0 0 129 129" xlinkhref="./icons/right-arrow.svg?v=1#icon"></svg-button>
+        </div>
+        <div class="list-marker" ng-if="$ctrl.parameters.allowMultiple==true">
+            <svg-button view-box="0 0 1792 1792" xlinkhref="./icons/square.svg?v=1#icon" ng-if="item.selected != true"></svg-button>
+            <svg-button view-box="0 0 1792 1792" xlinkhref="./icons/check-square.svg?v=1#icon" ng-if="item.selected == true"></svg-button>
+        </div>
+
+    </div>
+    <div class="fullscreen-modal-dialog-filler" ng-if="$ctrl.parameters.allowMultiple==true"></div>
+    <button class="sign-up-button fullscreen-modal-button" ng-if="$ctrl.parameters.allowMultiple==true" ng-click="$ctrl.submit()()" type="submit">Submit</button>
+    <div class="fullscreen-modal-dialog-spacer"></div>
+    <button class="fullscreen-modal-button" ng-click="$ctrl.closeDialog()" type="reset">Cancel</button>
+    <div class="fullscreen-modal-dialog-spacer" ng-if="$ctrl.parameters.allowMultiple==true"></div>
+</form>
+
+<busy-indicator loading="$ctrl.loading"></busy-indicator>
+
+
+<style>
+
+    .list-marker {
+        left: 5px;
+        position: absolute;
+        top: 10px;
+    }
+
+        .list-marker > svg-button > svg {
+            width: 15px;
+            height: 15px;
+            color: black;
+        }
+</style>

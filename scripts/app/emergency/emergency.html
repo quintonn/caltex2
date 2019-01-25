@@ -1,0 +1,35 @@
+﻿<div class="mobile-container">
+    <app-logo></app-logo>
+    <div class="mobile-list-item">
+        <div class="emergency emergency-button">
+            <svg-button class="emergency-svg-button" xlinkhref="./icons/bell.svg#icon" view-box="0 0 1792 1792"></svg-button>
+            <div>PANIC</div>
+        </div>
+    </div>
+    <div class="mobile-list-item">
+        <div class="medical emergency-button">
+            <svg-button class="emergency-svg-button" xlinkhref="./icons/ambulance.svg#icon" view-box="0 0 1792 1792"></svg-button>
+            <div>MEDICAL</div>
+        </div>
+    </div>
+</div>
+<busy-indicator loading="$ctrl.loading"></busy-indicator>
+
+<style>
+    .emergency {
+        background-color: red;
+    }
+    .medical {
+        background-color: green;
+    }
+    .emergency-button {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .emergency-svg-button > svg {
+        width: 37px;
+        height: 30px;
+    }
+    
+</style>

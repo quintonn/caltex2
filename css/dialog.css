@@ -1,0 +1,247 @@
+﻿.fullscreen-modal-button-container > .fullscreen-modal-button:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.message-box-message-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Arimo", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    white-space: pre-line; /* This is to keep line break characters from backend etc */
+    word-break: normal;
+}
+
+.message-box-container {
+    width: 100%;
+    min-height: 100%; /* Change from height to min-height to fix android */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: absolute;
+    overflow-y: auto;
+}
+
+.fullscreen-modal-button {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-height: 40px;
+}
+
+.inner-container {
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    flex-basis: auto;
+    overflow: auto;
+    max-height: 75vh;
+    order: 2;
+}
+
+.dialog-heading {
+    order: 1;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Arimo", sans-serif;
+    text-align: center;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modal-close-button > svg {
+    width: 20px;
+    height: 20px;
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.dialog-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px 10px 5px 10px;
+    min-width: 75px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dialog-body {
+    overflow: auto;
+}
+
+    .dialog-body > view-container > .content-container {
+        padding: 10px !important;
+    }
+
+.fullscreen-dialog-container > div.fullscreen-dialog-container:last-child {
+    display: block;
+}
+
+.fullscreen-dialog-container > div.fullscreen-dialog-container:not(:last-child) {
+    display: none;
+}
+
+.fullscreen-dialog-container {
+    /*background-color: white;*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.fullscreen-modal-heading {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Arimo", sans-serif;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.fullscreen-modal-dialog-filler {
+    flex: auto;
+    width: 100%;
+    min-height: 15px;
+}
+
+.fullscreen-modal-dialog-spacer {
+    height: 15px;
+    width: 100%;
+    min-height: 15px; /* Required to add padding on bottom when item is on very bottom of screen */
+}
+
+.modal-input-label {
+    font-size: 12px;
+}
+
+.no-dialog {
+    display: none;
+}
+
+.show-dialog {
+    display: block;
+}
+
+fullscreen-dialog-container {
+    z-index: 1; /* This is so the dialog goes above the menu on large screens (eg. ipad)*/
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.input-box-container {
+    text-align: left;
+}
+
+.input-box-label {
+    display: block;
+    font-family: "Arimo", sans-serif;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.input-box-input {
+    /*border-radius: 4px;*/
+    padding: 5px;
+    width: 100%;
+    font-size: 16px;
+    border: 0;
+}
+
+.select-input {
+    text-overflow: ellipsis;
+}
+
+.input-box-error {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.fullscreen-container {
+    padding: 20px;
+    height: 100%;
+}
+
+.fullscreen-container-item {
+    padding: 20px;
+}
+
+/* Small Windows (phones and tablets) */
+@media screen and (max-width: 800px), screen and (max-height: 400px) {
+
+    .dialog-heading {
+        --smallScreen: true; /* does not work on ie */
+    }
+
+    .inner-container {
+        min-width: 70vw;
+    }
+
+    .dialog-body {
+        max-height: 80vh;
+        min-width: 70vw;
+    }
+}
+
+/* Large Windows */
+@media only screen and (min-width: 801px) and (min-height: 401px) {
+
+    .dialog-heading,
+    .dialog-heading > div {
+        cursor: all-scroll;
+    }
+
+    .dialog-heading {
+        --smallScreen: false; /* does not work on ie */
+    }
+
+    .dialog-body {
+        max-height: 80vh;
+        padding: 10px;
+    }
+}
+
+.modal-back-button {
+    float: right;
+    right: 20px;
+    top: 20px;
+    position: absolute;
+}
+
+    .modal-back-button > svg {
+        width: 20px;
+        height: 20px;
+    }

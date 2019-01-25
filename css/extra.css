@@ -1,0 +1,91 @@
+﻿html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+    /*cursor: default;*/
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+    *|*:link, a { /* Fix the <a> link colors */
+        color: currentColor;
+    }
+
+* {
+    /*font-family: 'Montserrat', sans-serif;*/
+    /*font-family: "Arimo", sans-serif;*/
+    font-family: "Asap", sans-serif;
+}
+
+.left-50 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.top-50 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+/* Small Windows (phones and tablets) */
+@media screen and (max-width: 800px), screen and (max-height: 400px) {
+    h1, h2, h3, h4, h5, h6, p, div {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+    }
+}
+
+/* Large Windows */
+@media only screen and (min-width: 801px) and (min-height: 401px) {
+}
+
+/* Classes to toggle items when user is logged in or not */
+.user-set.require-user-present:not(.user-logged-on) {
+    display: none;
+}
+
+.user-set.require-user-present.user-logged-on {
+    display: block;
+}
+
+.user-set.require-user-not-present:not(.user-logged-on) {
+    display: block;
+}
+
+.user-set.require-user-not-present.user-logged-on {
+    display: none;
+}
+/* Toggle if on home page or not */
+.home-set.require-not-home-page.not-on-home-page {
+    display: block;
+}
+
+.home-set.require-not-home-page:not(.not-on-home-page) {
+    display: none;
+}
+
+.default-hidden {
+    display: none;
+}

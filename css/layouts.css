@@ -1,0 +1,195 @@
+﻿#headerContainer,
+#footerContainer,
+#contentContainer,
+#menuContainer {
+    padding: 0;
+    margin: 0;
+}
+
+#headerContainer {
+    top: 0;
+}
+
+#headerContainer,
+#footerContainer,
+#contentContainer {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    z-index: 0;
+}
+
+#footerContainer {
+    bottom: 0px;
+}
+
+#menuContainer {
+    top: 0;
+    height: 100%;
+    width: 0;
+    z-index: 1;
+}
+
+#menuContainer {
+    visibility: hidden;
+}
+
+    #menuContainer.menu-open {
+        visibility: visible;
+    }
+
+    #menuContainer.menu-closed {
+        width: 0;
+        visibility: hidden;
+    }
+
+    #menuContainer:not(.menu-right) {
+        left: 0;
+    }
+
+#headerContainer.animate-menu,
+#footerContainer.animate-menu,
+#contentContainer.animate-menu {
+    -webkit-transition: left 0.2s linear, width 0.2s linear, right 0.2s linear, top 0.2s linear;
+    -moz-transition: left 0.2s linear, width 0.2s linear, right 0.2s linear, top 0.2s linear;
+    -o-transition: left 0.2s linear, width 0.2s linear, right 0.2s linear, top 0.2s linear;
+    transition: left 0.2s linear, width 0.2s linear, right 0.2s linear, top 0.2s linear;
+}
+
+#menuContainer.animate-menu {
+    -webkit-transition: left 0.2s linear, width 0.2s linear, visibility 0.2s linear, top 0.2s linear;
+    -moz-transition: left 0.2s linear, width 0.2s linear, visibility 0.2s linear, top 0.2s linear;
+    -o-transition: left 0.2s linear, width 0.2s linear, visibility 0.2s linear, top 0.2s linear;
+    transition: left 0.2s linear, width 0.2s linear, visibility 0.2s linear, top 0.2s linear;
+}
+
+/* Very small devis in landscape mode */
+@media screen and (max-height: 400px) {
+    #headerContainer,
+    #footerContainer {
+        height: 25px;
+    }
+
+    #menuContainer.default-menu { /* On small screens always start with menu closed */
+        width: 0;
+        visibility: hidden;
+    }
+
+    #contentContainer {
+        height: calc(100% - 0px - 25px);
+        top: 25px;
+    }
+
+    #menuContainer {
+        width: 100%;
+        position: absolute; /* Used to determine if menu is on small or large screen */
+    }
+
+        #menuContainer.menu-show-header {
+            top: 25px !important;
+        }
+
+        #menuContainer.menu-show-header,
+        #menuContainer.menu-show-footer {
+            height: calc(100% - 25px) !important;
+        }
+
+            #menuContainer.menu-show-header.menu-show-footer {
+                top: 25px !important;
+                height: calc(100% - 0px - 25px) !important;
+            }
+}
+
+/* Small Windows (phones and tablets) */
+@media screen and (max-width: 800px) and (min-height: 401px) {
+    #headerContainer,
+    #footerContainer {
+        height: 44px;
+    }
+
+    #menuContainer.default-menu { /* On small screens always start with menu closed */
+        width: 0;
+        visibility: hidden;
+    }
+
+    #contentContainer {
+        height: calc(100% - 0px - 44px);
+        top: 44px;
+    }
+
+    #menuContainer {
+        width: 100%;
+        position: absolute; /* Used to determine if menu is on small or large screen */
+    }
+
+        #menuContainer.menu-show-header {
+            top: 44px !important;
+        }
+
+        #menuContainer.menu-show-header,
+        #menuContainer.menu-show-footer {
+            height: calc(100% - 44px) !important;
+        }
+
+            #menuContainer.menu-show-header.menu-show-footer {
+                top: 44px !important;
+                height: calc(100% - 44px - 44px) !important;
+            }
+}
+
+/* Large Windows */
+@media only screen and (min-width: 801px) and (min-height: 401px) {
+    #headerContainer,
+    #footerContainer {
+        height: 70px;
+        /*min-height: 70px;*/ /* This breaks auto resizing*/
+    }
+
+        #headerContainer.menu-open:not(.menu-overlay):not(.menu-right):not(.menu-show-header),
+        #footerContainer.menu-open:not(.menu-overlay):not(.menu-right):not(.menu-show-footer) {
+            left: 240px !important;
+        }
+
+        #headerContainer.menu-open:not(.menu-overlay):not(.menu-show-header),
+        #footerContainer.menu-open:not(.menu-overlay):not(.menu-show-footer) {
+            width: calc(100% - 240px) !important;
+        }
+
+    #contentContainer {
+        height: calc(100% - 0px - 70px);
+        top: 70px;
+    }
+
+        #contentContainer.menu-open:not(.menu-overlay):not(.menu-right) {
+            left: 240px !important;
+        }
+
+        #contentContainer.menu-open:not(.menu-overlay) {
+            width: calc(100% - 240px) !important;
+        }
+
+    #menuContainer {
+        position: fixed; /* Used to determine if menu is on small or large screen */
+    }
+
+        #menuContainer.menu-open {
+            width: 240px !important;
+        }
+
+        #menuContainer.menu-show-header {
+            top: 70px !important;
+            height: calc(100% - 70px) !important;
+        }
+
+        #menuContainer.menu-show-footer {
+            height: calc(100% - 70px) !important;
+        }
+
+        #menuContainer.menu-show-header.menu-show-footer {
+            height: calc(100% - 70px - 70px) !important;
+        }
+
+        #menuContainer.menu-right {
+            right: 0;
+        }
+}

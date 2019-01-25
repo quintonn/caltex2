@@ -1,0 +1,37 @@
+﻿<div class="mobile-container bg-white" >
+    <div class="fullscreen-modal-heading" ng-if="$ctrl.items.length == 0">There are no news right now. Please check again soon</div>
+
+    <div class="mobile-list-item" ng-repeat="item in $ctrl.items" ng-click="$ctrl.selectItem(item)">
+        <div class="mobile-list-heading">{{item.Title}}</div>
+        <!--<div class="mobile-list-sub-heading">{{item.Description}}</div>-->
+        <div class="mobile-list-body">{{item.Description}}</div>
+        <!--<div class="mobile-list-body" ng-if="item.ContentType == 0">{{item.Id}}</div>-->
+        
+        <div class="mobile-list-arrow  top-50">
+            <svg-button view-box="0 0 129 129" xlinkhref="./icons/right-arrow.svg?v=1#icon"></svg-button>
+        </div>
+        <!--<div class="list-marker" ng-if="item.HasRead == false">
+            <svg-button view-box="0 0 120 120" xlinkhref="./icons/circle.svg?v=1#icon"></svg-button>
+        </div>-->
+        <div class="list-marker">
+            <img src="./images/logo_small.png" style="width:20px; height: auto;" />
+        </div>
+
+    </div>
+</div>
+<busy-indicator loading="$ctrl.loading"></busy-indicator>
+
+<style>
+
+    .list-marker {
+        left: 5px;
+        position: absolute;
+        top: 10px;
+    }
+
+        .list-marker > svg-button > svg {
+            width: 10px;
+            height: 10px;
+            color: #FFD700;
+        }
+</style>

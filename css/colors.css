@@ -1,0 +1,213 @@
+﻿body, html {
+    background-color: black;
+}
+
+.bg-white {
+    background-color: white !important;
+    color: black !important;
+}
+
+.emergency-menu {
+    color: red;
+}
+
+.header-menu-button, .header-back-button {
+    color:white;
+}
+
+.busy-loader {
+    background-color: black;
+}
+
+.busy-icon:after {
+    border: 5px solid #fff;
+    border-color: #fff transparent #fff transparent;
+}
+
+#bool-check-box > svg-button > svg {
+    color: #fff;
+}
+
+.message-box-message-container {
+    color:white;
+}
+
+#contentContainer {
+    background-color: rgb(239, 243, 246);
+}
+
+.content-container {
+    background-color: #fff;
+}
+
+modal-dialog-container {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-dialog-container {
+    background-color: rgba(255,255,255,0);
+}
+
+    .modal-dialog-container close-button,
+    .modal-dialog-container back-button {
+        color: #fff;
+    }
+
+        .modal-dialog-container close-button:hover,
+        .modal-dialog-container back-button:hover {
+            background-color: rgba(0,0,0,0.3);
+        }
+
+.dialog-heading {
+    background-color: black;
+    color: #fff;
+    /*border-bottom: 1px solid gray;*/
+}
+
+.dialog-footer {
+    background-color: black;
+    color: #fff;
+    /*border-top: 1px solid gray;*/
+}
+
+.dialog-button {
+    /*background-color: #fff;*/
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid rgba(0,0,0,0.0);
+    color: #fff;
+}
+
+    .dialog-button:hover {
+        /*background-color: rgba(0,0,0,0.2);*/
+        border: 1px solid #fff;
+    }
+
+.input-box-input {
+    border: 1px solid gray;
+    background-color: rgba(128,128,128,0.1);
+    color: #fff;
+}
+
+    .input-box-input:focus {
+        border: 2px solid #555;
+        background-color: rgba(255,255,255, 0.1);
+        /*color:#fff;*/
+    }
+
+.fullscreen-modal-heading {
+    color: white;
+    font-family: "Asap", sans-serif;
+}
+
+.modal-back-button {
+    color: #fff;
+    font-family: "Asap", sans-serif;
+}
+
+.forgot-password-link {
+    color: #fff !important;
+}
+
+.input-box-error {
+    /*color: red;*/
+    color:blue;
+}
+
+.modal-input-label {
+    color: #fff;
+}
+
+.fullscreen-container,
+.mobile-container {
+    /*background: url('IMG/vuka.jpg') center right fixed black;*/
+    /*background: url('../images/caltex_back.jpg');*/
+    /*no-repeat center right fixed black;*/
+    background-color: black;
+    /*background-repeat: no-repeat;*/
+    background-repeat:round;
+    /*background-attachment: fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.mobile-container,
+.mobile-list-heading {
+    color: black;
+}
+
+.mobile-list-body {
+    color: gray;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    /*border-top: 1px solid rgba(0,0,0,0.3);*/
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
+}
+
+    header > menu-button {
+        color: #fff;
+    }
+
+
+.fullscreen-modal-button {
+    color: black;
+    background-color: #fff;
+}
+
+    .fullscreen-modal-button:active {
+        color: black;
+        background-color: lightgray;
+    }
+
+    .menu-list > ul > li:hover {
+    }
+
+.menu-user-info {
+    color: #fff;
+}
+
+/* Small Windows (phones and tablets) */
+@media screen and (max-width: 800px), screen and (max-height: 400px) {
+    menu {
+        background-color: #1b1b1b;
+        color: #fff;
+    }
+
+    .menu-list > ul {
+        color: silver;
+    }
+}
+/* Large Windows */
+@media only screen and (min-width: 801px) and (min-height: 401px) {
+    menu:not(.menu-overlay) {
+        background-color: #1b1b1b;
+        color: #fff;
+    }
+
+    menu.menu-overlay .menu-list > ul {
+        color: silver;
+    }
+
+    menu {
+        background-color: #1b1b1b;
+        color: #fff;
+    }
+
+        menu:not(.menu-overlay) .menu-list > ul {
+            color: silver;
+        }
+}
+
+.home-badge {
+    color: black;
+    background-color: red;
+}

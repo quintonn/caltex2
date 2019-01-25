@@ -1,0 +1,44 @@
+﻿footer {
+    text-align: center;
+}
+
+.footer {
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+}
+
+.footer-block-third {
+    width: 33%;
+    text-align: center;
+}
+
+/* Very small devis in landscape mode */
+@media screen and (max-height: 400px) {
+    .footer-label {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-height: 401px) {
+
+    .footer-label {
+        font-size: 12px;
+    }
+}
+
+/* Large Windows */
+@media only screen and (min-width: 801px) and (min-height: 401px) {
+
+    .footer-label {
+        font-size: 14px;
+    }
+}

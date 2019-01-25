@@ -1,0 +1,72 @@
+﻿menu {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#menuContainer.menu-closed > div,
+#menuContainer.menu-closed > .menu-list > ul > li {
+    visibility: hidden !important;
+}
+
+.menu-header {
+    top: 22px;
+    position: absolute;
+    width: 100%;
+}
+
+    .menu-header > div {
+        padding: 5px;
+    }
+
+.menu-user-info {
+    /*text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;*/
+}
+
+.menu-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+    .menu-close-button > svg {
+        width: 20px;
+        height: 20px;
+        /*color:black;*/
+    }
+
+.menu-list {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 80px);
+    top: 80px;
+}
+
+    .menu-list > ul {
+        padding: 0;
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        height: calc(100% - 20px);
+        font-size: 15px;
+        overflow-y: auto;
+    }
+
+        .menu-list > ul > li {
+            margin-left: 20px;
+            margin-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(128,128,128,0.2);
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+/* Small Windows (phones and tablets) */
+@media screen and (max-width: 800px), screen and (max-height: 400px) {
+    .menu-list > ul > li {
+        text-align: left;
+    }
+}

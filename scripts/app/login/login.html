@@ -1,0 +1,26 @@
+﻿<form class="fullscreen-container message-box-container">
+    <div class="fullscreen-modal-heading">
+        Login
+    </div>
+    <app-logo></app-logo>
+    <div class="fullscreen-modal-dialog-spacer"></div>
+    <label class="modal-input-label">Email</label>
+    <input class="input-box-input" type="text" ng-model="$ctrl.email" placeholder="Email" ng-focus="true" />
+    <label class="input-box-error">{{$ctrl.emailError}}</label>
+    <label class="modal-input-label">Password</label>
+    <input class="input-box-input" type="password" ng-model="$ctrl.password" placeholder="Password" />
+    <label class="input-box-error">{{$ctrl.passwordError}}</label>
+
+    <div class="fullscreen-modal-dialog-spacer"></div>
+    <a class="forgot-password-link" href="" ng-click="$ctrl.forgotPassword()">Forgot Password?</a>
+    <div class="fullscreen-modal-dialog-spacer"></div>
+
+    <button class="fullscreen-modal-button" ng-click="$ctrl.loginClick()">Login</button>
+    <div class="fullscreen-modal-dialog-filler"></div>
+    <!--<button class="fullscreen-modal-button" ng-click="$ctrl.signupClick()">Sign Up</button>
+    <div class="fullscreen-modal-dialog-spacer"></div>-->
+    <!-- Users can not self enroll to have a user profile on the app.
+         Users will be added by coaches.-->
+</form>
+
+<busy-indicator loading="$ctrl.loading"></busy-indicator>

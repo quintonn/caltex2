@@ -1,0 +1,48 @@
+﻿.container-heading {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Arimo", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.content-container {
+    height: 100%;
+    width: 100%;
+    position: absolute; /* Without this, flex box is broken on android phone at least*/
+    overflow: auto;
+}
+
+.screen-container {
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* Small Windows (phones and tablets) */
+@media screen and (max-width: 800px), screen and (max-height: 400px) {
+    #ng-view-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+/* Large Windows */
+@media only screen and (min-width: 801px) and (min-height: 401px) {
+    #contentContainer {
+        padding: 20px !important;
+    }
+
+    #ng-view-container {
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        position: absolute;
+    }
+
+        #ng-view-container > view-container > .content-container {
+            border-radius: 10px;
+            border: 2px solid lightgray;
+        }
+}

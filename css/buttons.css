@@ -1,0 +1,54 @@
+﻿.svg-button-small > svg {
+    width: 20px;
+    height: 20px;
+}
+
+close-button,
+.header-menu-button,
+svg-button,
+.header-back-button {
+    font-size: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Very small devis in landscape mode */
+@media screen and (max-height: 400px) {
+    .responsive-svg-button > svg {
+        width: 18px;
+        height: 15px;
+    }
+}
+
+/* Small Windows (phones and tablets) */
+@media screen and (max-width: 800px) and (min-height: 401px) {
+
+    #headerContainer.menu-open:not(.default-menu) > .header-menu-button {
+        visibility: hidden;
+    }
+
+    #headerContainer.menu-open.default-menu > .header-menu-button {
+        visibility: visible;
+    }
+
+    .responsive-svg-button > svg {
+        width: 27px;
+        height: 20px;
+    }
+}
+
+/* Large Windows */
+@media only screen and (min-width: 801px) and (min-height: 401px) {
+    #headerContainer.menu-open > .header-menu-button {
+        visibility: hidden;
+    }
+
+    #headerContainer.menu-open.default-menu > .header-menu-button {
+        visibility: hidden;
+    }
+
+    .responsive-svg-button > svg {
+        width: 27px;
+        height: 20px;
+    }
+}

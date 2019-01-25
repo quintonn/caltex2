@@ -1,0 +1,11 @@
+﻿<div id="contentContainer">
+    <div id="ng-view-container" ng-view></div>
+</div>
+
+<header id="headerContainer"></header>
+<svg-button class="header-menu-button responsive-svg-button" xlinkhref="./icons/menu.svg#icon" view-box="0 0 50 50" ng-click="$ctrl.menuClick()"></svg-button>
+<svg-button class="header-back-button responsive-svg-button" xlinkhref="./icons/arrow-left.svg#icon" view-box="0 0 1024 1024" ng-click="$ctrl.backClick()" ng-if="$ctrl.showBack() == true"></svg-button>
+<menu id="menuContainer"></menu>
+<!--<footer id="footerContainer"></footer>-->
+<!--<modal-dialog-container ng-class="getClass()"></modal-dialog-container>-->
+<fullscreen-dialog-container ng-class="getFullModalClass()"></fullscreen-dialog-container>

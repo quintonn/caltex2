@@ -1,0 +1,93 @@
+﻿<div class="mobile-container home-container">
+    <table class="mobile-list-item">
+        <thead>
+            <tr>
+                <th colspan="10">Points Earned</th>
+            </tr>
+            <tr>
+                <th>Bunnies</th>
+                <th>Red</th>
+                <th>Grn</th>
+                <th>Ylw</th>
+                <th>R Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>This Week</th>
+                <td>2</td>
+                <td>5</td>
+                <td>1</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <th>This Month</th>
+                <td>6</td>
+                <td>10</td>
+                <td>3</td>
+                <td>260</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>8</td>
+                <td>15</td>
+                <td>4</td>
+                <td>355</td>
+            </tr>
+            <tr>
+                <th colspan="4">Redeemed to date</th>
+                <td>600</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<busy-indicator loading="$ctrl.loading"></busy-indicator>
+<style>
+    .home-container::before {
+        content: "";
+        background: url('images/background.jpeg');
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        /*z-index: -1;*/
+        background-repeat: round;
+        /*background-attachment: fixed;*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    table th {
+        color: #ffffff;
+        font-size: 1em;
+        font-weight: 600;
+        padding: 0.75em 0.75em;
+        text-align: left;
+    }
+
+    table td {
+        padding: 0.75em 0.75em;
+        color:white;
+    }
+
+    table tbody tr:nth-child(2n+1) {
+        /*background-color: rgba(255, 255, 255, 0.025);*/
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .log-group, .log-group th {
+        color: #00632c !important;
+        background-color: #FFD700 !important;
+    }
+</style>

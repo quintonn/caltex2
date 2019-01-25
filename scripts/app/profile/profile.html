@@ -1,0 +1,49 @@
+﻿<form class="fullscreen-container message-box-container">
+    <div class="fullscreen-modal-heading">
+        Player Profile
+        <svg-button class="modal-back-button responsive-svg-button" xlinkhref="./icons/arrow-left.svg#icon" view-box="0 0 1024 1024" ng-click="$ctrl.backClick()"></svg-button>
+    </div>
+    <app-logo></app-logo>
+    <div class="fullscreen-modal-dialog-spacer"></div>
+    <label class="modal-input-label">Name</label>
+    <input class="input-box-input" type="text" ng-model="$ctrl.name" placeholder="Name" />
+    <label class="input-box-error">{{$ctrl.nameError}}</label>
+    <label class="modal-input-label">Surname</label>
+    <input class="input-box-input" type="text" ng-model="$ctrl.surname" placeholder="Surname" />
+    <label class="input-box-error">{{$ctrl.surnameError}}</label>
+
+    <label class="modal-input-label">Sample Text</label>
+    <input class="input-box-input" type="text" placeholder="Sample Text Input" />
+    <label class="input-box-error">Sample Error</label>
+
+    <label class="modal-input-label">Sample Number</label>
+    <input class="input-box-input" type="number" placeholder="Enter Number" />
+    <label class="input-box-error">Number Error</label>
+
+    <div>
+        <label class="modal-input-label">Sample Date</label>
+        <input class="input-box-input" type="date" placeholder="Date" />
+    </div>
+
+    <!--<label class="modal-input-label">Yes/No Sample</label>
+    <div id="bool-check-box" ng-click="$ctrl.check()">
+        <svg-button view-box="0 0 1792 1792" xlinkhref="./icons/square.svg?v=1#icon" ng-if="$ctrl.isChecked != true"></svg-button>
+        <svg-button view-box="0 0 1792 1792" xlinkhref="./icons/check-square.svg?v=1#icon" ng-if="$ctrl.isChecked == true"></svg-button>
+    </div>-->
+
+    <label class="input-box-error">{{$ctrl.allErrors()}}</label>
+    <button class="sign-up-button fullscreen-modal-button" ng-click="$ctrl.updateProfile()" type="submit">Update</button>
+    <div class="fullscreen-modal-dialog-filler"></div>
+    <button class="sign-up-button fullscreen-modal-button" ng-click="$ctrl.closeDialog()" type="reset">Cancel</button>
+    <div class="fullscreen-modal-dialog-spacer"></div>
+</form>
+
+<busy-indicator loading="$ctrl.loading"></busy-indicator>
+<style>
+    #bool-check-box > svg-button > svg {
+        width: 25px;
+        height: 25px;
+        color: black;
+        background-color:red;
+    }
+</style>

@@ -1,0 +1,17 @@
+﻿<svg-button class="menu-close-button responsive-svg-button" xlinkhref="./icons/close.svg?v=1#icon" view-box="0 0 50 50" ng-click="$ctrl.closeClick()"></svg-button>
+<div class="menu-list">
+    <ul>
+        <li class="" ng-repeat="item in $ctrl.menus" ng-click="$ctrl.menuClick(item)" ng-class="item.getExtraClass()">
+            <svg-button class="menu-svg-button" xlinkhref="./icons/user.svg#icon" view-box="0 0 1792 1792"></svg-button>
+            <span>{{item.label}}</span>
+        </li>
+    </ul>
+</div>
+
+<busy-indicator loading="$ctrl.loading"></busy-indicator>
+<style>
+    .menu-svg-button > svg {
+        width: 37px;
+        height: 30px;
+    }
+</style>

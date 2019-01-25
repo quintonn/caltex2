@@ -1,0 +1,21 @@
+﻿<div class="fullscreen-container message-box-container">
+    <div class="fullscreen-modal-heading">
+        {{$ctrl.title}}
+        <svg-button class="menu-close-button  responsive-svg-button" xlinkhref="./icons/close.svg?v=1#icon" view-box="0 0 50 50" ng-click="$ctrl.buttonClick('x')"></svg-button>
+    </div>
+
+    <!--<app-logo></app-logo>-->
+
+    <div class="message-box-message-container">
+        {{$ctrl.message}}
+        <div ng-if="$ctrl.isInput == true" style="text-align:left">
+            <div class="fullscreen-modal-dialog-spacer"></div>
+            <input class="input-box-input" type="text" ng-model="$ctrl.inputValue" placeholder="{{$ctrl.message}}" ng-focus="true" />
+            <label class="input-box-error">{{$ctrl.inputError}}</label>
+        </div>
+    </div>
+
+    <div class="fullscreen-modal-button-container">
+        <button ng-repeat="button in $ctrl.buttons" class="fullscreen-modal-button" ng-click="$ctrl.buttonClick(button.id)">{{button.label}}</button>
+    </div>
+</div>
