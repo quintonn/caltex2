@@ -1,0 +1,20 @@
+﻿<form class="message-box-container mobile-container splash-container">
+    <!--<div class="fullscreen-modal-heading" style="color:black;">
+    </div>-->
+    <app-logo></app-logo>
+
+    <div class="fullscreen-modal-dialog-filler"></div>
+    <button class="sign-up-button fullscreen-modal-button" ng-click="$ctrl.closeDialog()" type="reset">Let's go somewhere...</button>
+    <div class="fullscreen-modal-dialog-spacer"></div>
+
+
+</form>
+
+<busy-indicator loading="$ctrl.loading"></busy-indicator>
+<style>
+    .splash-container {
+        background: url('images/caltex_back.jpg');
+        background-repeat: no-repeat;
+        background-size: 150% 100%;
+    }
+</style>

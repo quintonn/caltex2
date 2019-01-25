@@ -1,41 +1,37 @@
 ﻿<div class="mobile-container screen-container home-container">
 
     <div id="block1" class="home-block">
+        <div ng-click="$ctrl.iconClick('loyalty')">
+            <svg-button class="home-svg-button" xlinkhref="./icons/credit-card.svg#icon" view-box="0 0 1792 1792"></svg-button>
+            <div>Loyalty</div>
+            <span class="home-badge" ng-if="$ctrl.unreadNews > 0">{{$ctrl.unreadNews}}</span>
+        </div>
+    </div>
+    <div id="block2" class="home-block">
         <div ng-click="$ctrl.iconClick('bunny')">
             <svg-button class="home-svg-button" xlinkhref="./icons/rabbit.svg#icon" view-box="0 0 1000 1000"></svg-button>
             <div>Bunnies</div>
         </div>
     </div>
-
-    <div id="block2" class="home-block">
+    <div id="block3" class="home-block">
         <div ng-click="$ctrl.iconClick('stores')">
             <svg-button class="home-svg-button" xlinkhref="./icons/map-marker.svg#icon" view-box="0 0 1792 1792"></svg-button>
             <div>Stores</div>
         </div>
     </div>
-
-    <div id="block3" class="home-block">
-        <div ng-click="$ctrl.iconClick('loyalty')">
-            <svg-button class="home-svg-button" xlinkhref="./icons/credit-card.svg#icon" view-box="0 0 1792 1792"></svg-button>
-            <div>Points</div>
-            <span class="home-badge" ng-if="$ctrl.unreadNews > 0">{{$ctrl.unreadNews}}</span>
-        </div>
-    </div>
-
-
-    <!--<div id="block4" class="home-block">
+    <div id="block4" class="home-block">
         <div ng-click="$ctrl.iconClick('redeem')">
             <svg-button class="home-svg-button" xlinkhref="./icons/money.svg#icon" view-box="0 0 1792 1792"></svg-button>
             <div>Redeem</div>
         </div>
-    </div>-->
+    </div>
 
-    <!--<div id="emergencyBlock" class="home-block">
+    <div id="emergencyBlock" class="home-block">
         <div ng-click="$ctrl.iconClick('emergency')">
             <svg-button class="home-svg-button" xlinkhref="./icons/bell.svg#icon" view-box="0 0 1792 1792"></svg-button>
             <div>SOS</div>
         </div>
-    </div>-->
+    </div>
 </div>
 <div class="home-background">
 
@@ -45,7 +41,7 @@
 
     .home-container::before {
         content: "";
-        background: url('images/background.jpeg');
+        background: url('images/caltex_back_2.jpg');
         opacity: 0.5;
         top: 0;
         left: 0;
@@ -87,30 +83,22 @@
     }
 
     #block1 {
-        left: 50%;
+        left: 0;
         top: 0;
-        transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
+        border-right: 1px solid rgba(128,128,128,0.6);
     }
 
     #block2 {
         left: 50%;
-        top: 33%;
-        transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
+        top: 0;
     }
 
     #block3 {
-        left: 50%;
-        top: 66%;
-        transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
+        left: 0;
+        top: 50%;
+        border-right: 1px solid rgba(128,128,128,0.6);
+        border-top: 1px solid rgba(128,128,128,0.6);
+        border-bottom: 1px solid rgba(128,128,128,0.6);
     }
 
     #block4 {
@@ -131,7 +119,7 @@
 
     .home-block {
         position: absolute;
-        height: 30%;
+        height: 50%;
         width: 50%;
     }
 
@@ -152,7 +140,7 @@
             color: white;
             background-color: #035A85;
             border-radius: 1000px;
-            width: 250px;
+            width: 100px;
             text-transform: uppercase;
         }
 </style>

@@ -2,9 +2,11 @@
 {
     'use strict';
 
-    HomePageController.$inject = ['menuService', '$rootScope', '$scope'];
+    HomePageController.$inject = ['menuService', '$rootScope', '$scope', 'dialogService'];
 
-    function HomePageController(menuService, $rootScope, $scope)
+    var firstTime = true;
+
+    function HomePageController(menuService, $rootScope, $scope, dialogService)
     {
         var self = this;
 
@@ -27,7 +29,13 @@
 
         self.$onInit = function ()
         {
-            self.unreadNews = 0;
+            if (firstTime == true)
+            {
+                firstTime = false;
+                return dialogService.showInputDialog("Filter", "splash", {}, null, true).then(function (ageGroup)
+                {
+                });
+            }
         };
     }
 
