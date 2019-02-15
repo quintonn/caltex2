@@ -8,11 +8,11 @@
     {
         var self = this;
 
-        
+        console.log('x');
     }
 
     
-    app.component('bunny', {
+    app.component('caltexRabbit', {
         templateUrl: function ()
         {
             return 'scripts/app/bunny/bunny.html?v=' + main.version();

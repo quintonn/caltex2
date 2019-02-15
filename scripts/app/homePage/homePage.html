@@ -8,9 +8,10 @@
         </div>
     </div>
     <div id="block2" class="home-block">
-        <div ng-click="$ctrl.iconClick('bunny')">
-            <svg-button class="home-svg-button" xlinkhref="./icons/rabbit.svg#icon" view-box="0 0 1000 1000"></svg-button>
-            <div>Bunnies</div>
+        <div ng-click="$ctrl.iconClick('caltex-rabbit')" class="caltext-bunny">
+            <!--<svg-button class="home-svg-button" xlinkhref="./icons/rabbit.svg#icon" view-box="0 0 1000 1000"></svg-button>-->
+            <!--<img src="/images/caltex_bunny.png" />-->
+            <div>Caltex Rabbit</div>
         </div>
     </div>
     <div id="block3" class="home-block">
@@ -38,6 +39,16 @@
 </div>
 <busy-indicator loading="$ctrl.loading"></busy-indicator>
 <style>
+
+    .caltext-bunny {
+        background: url('images/caltex_bunny.png') no-repeat center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+    }
 
     .home-container::before {
         content: "";
@@ -141,6 +152,7 @@
             background-color: #035A85;
             border-radius: 1000px;
             width: 100px;
+            min-height: 100px;
             text-transform: uppercase;
         }
 </style>
